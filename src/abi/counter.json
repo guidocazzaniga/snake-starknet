@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Uint256",
+    "type": "struct",
+    "members": [
+      {
+        "name": "low",
+        "type": "felt",
+        "offset": 0
+      },
+      {
+        "name": "high",
+        "type": "felt",
+        "offset": 1
+      }
+    ],
+    "size": 2
+  },
+  {
+    "name": "Position",
+    "type": "struct",
+    "members": [
+      {
+        "name": "x",
+        "type": "felt",
+        "offset": 0
+      },
+      {
+        "name": "y",
+        "type": "felt",
+        "offset": 1
+      }
+    ],
+    "size": 2
+  },
+  {
+    "name": "mintToken",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "amount",
+        "type": "Uint256"
+      },
+      {
+        "name": "address",
+        "type": "felt"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "name": "setSeed",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "seed",
+        "type": "felt"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "name": "read_seed",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "res",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "name": "validateGame",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "moves_len",
+        "type": "felt"
+      },
+      {
+        "name": "moves",
+        "type": "felt*"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "isValid",
+        "type": "felt"
+      }
+    ]
+  },
+  {
+    "name": "D_showFinalState",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "moves_len",
+        "type": "felt"
+      },
+      {
+        "name": "moves",
+        "type": "felt*"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "body_len",
+        "type": "felt"
+      },
+      {
+        "name": "body",
+        "type": "Position*"
+      },
+      {
+        "name": "food_index",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "name": "showInitState",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "body_pos",
+        "type": "Position"
+      },
+      {
+        "name": "food_pos_len",
+        "type": "felt"
+      },
+      {
+        "name": "food_pos",
+        "type": "Position*"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "name": "getPositionsFromSeed",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "seed",
+        "type": "felt"
+      },
+      {
+        "name": "maxX",
+        "type": "felt"
+      },
+      {
+        "name": "maxY",
+        "type": "felt"
+      },
+      {
+        "name": "howMany",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "pos_len",
+        "type": "felt"
+      },
+      {
+        "name": "pos",
+        "type": "Position*"
+      }
+    ],
+    "stateMutability": "view"
+  }
+]
